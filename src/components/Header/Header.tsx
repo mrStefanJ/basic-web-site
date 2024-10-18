@@ -145,7 +145,7 @@ const Header = () => {
             <li className="contact__link">
               <NavLink
                 to="/contact"
-                className={({ isActive }) => (isActive ? "subActive" : "")}
+                className={({ isActive }) => (isActive ? "active" : "")}
                 onClick={closeNav}
               >
                 Contact
