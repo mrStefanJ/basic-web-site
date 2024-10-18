@@ -1,0 +1,140 @@
+.home__container {
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  position: relative;
+  height: 80vh;
+  clear: both;
+  overflow: hidden;
+}
+
+.slider__wrapper {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.slider__image {
+  min-width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slider__image.active {
+  opacity: 1;
+  animation: zoom-in 2s forwards;
+}
+
+@keyframes zoom-in {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.home__technology-specialists {
+  position: relative;
+  height: 100%;
+}
+
+.technology-specialists__image {
+  background-image: url("https://wallpapercrafter.com/desktop/132151-Windows-10-minimalism-artwork-purple-background.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: 50% 50%;
+  background-color: rgba(0, 0, 0, 0);
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.technology-specialists__text {
+  padding: 80px 0 0;
+  font-size: 24px;
+  transform: translateY(60px); /* Start slightly below */
+  transition: all 0.8s ease-in-out;
+}
+
+.technology-specialists__icons {
+  padding-top: 200px;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-in-out;
+}
+
+.technology-specialists__icons.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.technology-specialists__icons svg {
+  font-size: 40px;
+}
+
+.icon .number__count {
+  font-size: 30px;
+}
+
+.home__technology {
+  padding-top: 50px;
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.home__technology-text {
+  font-size: 34px;
+}
+
+.home__technology-list {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-evenly;
+}
+
+.technology__card {
+  padding: 40px 0;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .slider {
+    height: 100vh;
+  }
+
+  .slider__image {
+    height: 100vh;
+  }
+
+  .home__technology {
+    padding: 200px;
+  }
+
+  .technology-specialists__text {
+    padding: 200px 0 0;
+  }
+
+  .home__technology-list {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,17 @@
+.project__details {
+  padding-top: 100px;
+  height: 100vh;
+}
+
+.project button {
+  margin-top: 80px;
+  padding: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.project button:hover {
+  color: #c22f2f;
+}

@@ -1,0 +1,185 @@
+nav {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  background: #242526;
+}
+
+nav .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
+}
+
+.wrapper .logo a {
+  color: #f2f2f2;
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.wrapper .menu-icon {
+  cursor: pointer;
+}
+
+.wrapper .menu-icon svg path {
+  fill: #fff;
+}
+
+.wrapper .nav-links {
+  position: fixed;
+  top: 58px;
+  right: -78vw;
+  height: 100vh;
+  width: 250px;
+  background: #242526;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+  transition: all 0.3s ease;
+  align-items: flex-start;
+}
+
+.wrapper .nav-links.active {
+  right: 0;
+}
+
+.nav-links li {
+  list-style: none;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.nav-links li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.nav-links li a.active {
+  color: #c22f2f;
+}
+
+.nav-links li a:hover {
+  color: #c22f2f;
+}
+
+.wrapper .btn {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.wrapper .btn.menu-btn {
+  display: inline-block;
+}
+
+.wrapper .btn.close-btn {
+  display: none;
+}
+
+#menu-btn:checked ~ .nav-links {
+  right: 0;
+}
+
+/* Thi part of Style is open and close sub menu*/
+
+.project__link svg path {
+  fill: #c22f2f;
+}
+
+.drop-sub__menu {
+  margin-left: 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+  text-align: left;
+}
+
+.drop-sub__menu.open {
+  max-height: 500px; /* adjust based on content size */
+}
+
+.icon {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.drop-sub__menu li a.subActive {
+  color: #c22f2f;
+}
+
+.drop-sub__menu li a:hover {
+  color: #c22f2f;
+}
+
+/* Mobile First - Base Styles */
+@media screen and (min-width: 970px) {
+  /* Enhancements for larger screens */
+  .wrapper {
+    max-width: 1300px;
+    margin: auto;
+  }
+
+  .wrapper .menu-icon {
+    display: none;
+  }
+
+  .wrapper .nav-links {
+    position: static;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: none;
+    padding: 0;
+  }
+
+  .nav-links li {
+    margin: 0 15px;
+    position: relative; /* Added to position submenu properly */
+  }
+
+  /* Hide submenu initially */
+  .nav-links .drop-sub__menu {
+    position: absolute;
+    top: 100%; /* Position right below the "Project" link */
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    transition: all 0.4s ease-in-out;
+    background: #242526;
+    z-index: 1; /* Make sure it appears on top */
+    padding: 0;
+    text-align: left;
+  }
+
+  .nav-links .drop-sub__menu li {
+    padding: 10px;
+  }
+
+  /* Show submenu on hover */
+  .project__link:hover .drop-sub__menu {
+    opacity: 1;
+    visibility: visible;
+    max-height: 500px; /* Adjust based on content */
+    
+  }
+
+  /* Disable the plus/minus icons for desktop view */
+  .project__link .icon {
+    display: none;
+  }
+
+  /* Ensure drop-sub__menu takes the full width under "Project" */
+  .drop-sub__menu li {
+    white-space: nowrap; /* Prevent content from wrapping */
+    margin: 0;
+  }
+}

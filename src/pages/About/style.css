@@ -1,0 +1,19 @@
+.about {
+  height: 100%;
+}
+
+.about .about__text {
+  padding: 100px 10px 0;
+  text-align: justify;
+}
+
+.about .about__text:nth-child(2) {
+  padding-bottom: 40px;
+}
+
+@media (min-width: 1440px) {
+  .about{
+    height: 100vh;
+  }
+
+}
