@@ -30,3 +30,7 @@
   margin-right: 0;
   padding-left: 40px;
 }
+
+.container__text {
+  padding: 50px 0 100px;
+}
