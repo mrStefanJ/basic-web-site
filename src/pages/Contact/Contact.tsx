@@ -121,8 +121,6 @@ const Contact = () => {
             <iframe
               id="map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.4115603035143!2d20.414641812586158!3d44.81317957095014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a656205000357%3A0xe8aece40a71689d8!2sDekadas%20d.o.o.!5e0!3m2!1sen!2srs!4v1728569323369!5m2!1sen!2srs"
-              width="600px"
-              height="450px"
               loading="lazy"
               title="Map of location Belgrade"
               className="contact__map-embed"
