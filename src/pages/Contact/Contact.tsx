@@ -120,12 +120,12 @@ const Contact = () => {
             {mapLoading && <div className="map-loading">Loading Map...</div>}
             <iframe
               id="map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.4115603035143!2d20.414641812586158!3d44.81317957095014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a656205000357%3A0xe8aece40a71689d8!2sDekadas%20d.o.o.!5e0!3m2!1sen!2srs!4v1728569323369!5m2!1sen!2srs"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d22665.02125462023!2d20.479999999999997!3d44.7578112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2srs!4v1729604682691!5m2!1sen!2srs"
               loading="lazy"
               title="Map of location Belgrade"
               className="contact__map-embed"
-              onLoad={() => setMapLoading(false)} // Set map loading to false when the map loads
-              onError={() => setMapLoading(false)} // Handle error and stop loading
+              onLoad={() => setMapLoading(false)}
+              onError={() => setMapLoading(false)}
             ></iframe>
           </div>
         </div>
