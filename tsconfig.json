@@ -6,8 +6,10 @@
       "dom.iterable",
       "esnext"
     ],
+    "skipLibCheck": true,         // <--- IMPORTANT: This ignores errors in node_modules
+    "typeRoots": ["./node_modules/@types"], // <--- Explicitly points to types
+    "types": ["node", "jest", "react", "react-dom"], // <--- Limits global types
     "allowJs": true,
-    "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
