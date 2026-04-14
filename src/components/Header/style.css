@@ -169,6 +169,7 @@ nav .wrapper {
     opacity: 1;
     visibility: visible;
     max-height: 500px; /* Adjust based on content */
+    padding-top: 10px;
     
   }
 
